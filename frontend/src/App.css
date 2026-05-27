@@ -1,0 +1,358 @@
+/* ================= GLOBAL BACKGROUND ================= */
+.app-container {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  color: #111827;
+  display: flex;
+  flex-direction: column;
+  
+  /* Green grass ground background */
+  background-image: 
+    linear-gradient(rgba(249, 250, 251, 0.85), rgba(249, 250, 251, 0.9)),
+    url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* ================= RESPONSIVE BREAKPOINTS ================= */
+
+/* Mobile First - Base styles above work for mobile */
+
+/* Mobile: 0px - 639px */
+@media (max-width: 639px) {
+  .navbar-inner {
+    padding: 0.75rem 1rem;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.125rem;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .main-content {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reservation-section {
+    width: 100%;
+  }
+
+  .card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .step-title {
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .turf-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .turf-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .turf-img {
+    width: 100%;
+    height: 8rem;
+  }
+
+  .slots-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .summary-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .total-box {
+    text-align: center;
+  }
+
+  .payment-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .payment-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .back-btn {
+    width: 100%;
+  }
+
+  .teams-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .team-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .reg-date {
+    align-self: flex-end;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-col p {
+    max-width: 100%;
+  }
+
+  .contact-list p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sticky-card {
+    position: static;
+  }
+}
+
+/* Tablet: 640px - 1023px */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .navbar-inner {
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .main-content {
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .reservation-section {
+    width: 100%;
+  }
+
+  .turf-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .slots-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .teams-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .sticky-card {
+    position: static;
+  }
+}
+
+/* Laptop/Desktop: 1024px+ */
+@media (min-width: 1024px) {
+  .navbar-inner {
+    padding: 0.75rem 2rem;
+    margin: 10px 20px;
+    background-image: radial-gradient(rgba(16, 176, 212, 0.47), rgb(76, 207, 24));
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2.5rem 2rem;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .reservation-section {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .turf-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .slots-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  
+
+  .teams-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background-image: radial-gradient(rgba(11, 181, 169, 0.47), rgb(76, 207, 24));
+    padding: 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem;
+    gap: 2rem;
+    background-image: radial-gradient(rgba(16, 176, 212, 0.47), rgb(76, 207, 24));
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sticky-card {
+    position: sticky;
+    top: 6rem;
+  }
+}
+
+/* Large Desktop: 1280px+ */
+@media (min-width: 1280px) {
+  .main-content {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  .teams-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Fix for very small screens */
+@media (max-width: 375px) {
+  .step-number {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  .step-title {
+    font-size: 1rem;
+  }
+
+  .slots-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .slot-btn {
+    font-size: 0.875rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+}
